@@ -5,6 +5,7 @@ services:
     container_name: wvelasticsearch
     environment:
       - name=wvelasticsearch
+      - node.name=wv-node1
       - cluster.name=docker-cluster
       - bootstrap.memory_lock=true
       - http.cors.enabled=true
@@ -25,6 +26,7 @@ services:
     container_name: wvelasticsearch2
     environment:
       - cluster.name=docker-cluster
+      - node.name=wv-node2
       - bootstrap.memory_lock=true
       - http.cors.enabled=true
       - http.cors.allow-origin=*
@@ -43,6 +45,7 @@ services:
     container_name: wvelasticsearch3
     environment:
       - cluster.name=docker-cluster
+      - node.name=wv-node3
       - bootstrap.memory_lock=true
       - http.cors.enabled=true
       - http.cors.allow-origin=*
